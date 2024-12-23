@@ -1,14 +1,11 @@
 import './App.css'
-import { Navbar } from './Components/Shared/Navbar'
-import { IconCloudDemo } from './Components/Skills/SkillImage'
+import Navbar from './Components/Shared/Navbar'
 
 function App() {
   return (
     <>
       <div>
-       hiii
-       {/* <IconCloudDemo/> */}
-       {/* <Navbar/> */}
+      <Navbar/>
       </div>
 
     </>
