@@ -29,7 +29,7 @@ const Navbar = () => {
                         className={`lg:flex flex-grow justify-center gap-10 items-center ${isMenuOpen ? "block absolute top-full left-0 w-full bg-white z-10 py-3" : "hidden"
                             }`}
                     >
-                        <ul className="flex flex-col lg:flex-row gap-5 lg:gap-10 text-center">
+                        <ul className="flex flex-col lg:flex-row gap-5 lg:gap-10 text-center font-semibold">
                             <li className="hover:scale-150 transform transition-transform duration-200" >Home</li>
                             <li className="hover:scale-150 transform transition-transform duration-200" >About</li>
                             <li className="hover:scale-150 transform transition-transform duration-200" >Skills</li>
