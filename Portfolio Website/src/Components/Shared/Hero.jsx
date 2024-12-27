@@ -23,7 +23,7 @@ const HomePage = () => {
 
     return (
         <div>
-            <div className=" min-h-screen sm:mt-2 md:mt-3 lg:mt-7  flex items-center justify-center px-5">
+            <div className=" min-h-screen sm:mt-2 md:mt-3  flex items-center justify-center px-5">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-6xl w-full">
                     {/* Left Content Section */}
                     <motion.div
