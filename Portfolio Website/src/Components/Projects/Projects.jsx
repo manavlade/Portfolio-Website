@@ -61,7 +61,9 @@ const Projects = () => {
         <div>
             <section className="py-16 px-6 lg:px-20 bg-gray-50">
                 <div className="text-center mb-12">
-                    <p className="text-lg uppercase text-gray-500 tracking-wide">Projects</p>
+                    <p className="text-lg uppercase text-gray-500 tracking-wide hover:scale-110 transform transition-transform duration-200 cursor-pointer hover:underline">
+                        Projects
+                    </p>
                     <h2 className="text-2xl lg:text-5xl font-extrabold text-gray-900 mt-2">Explore My Creative Work</h2>
                     <p className=" text-lg text-gray-600 mt-2">
                         A collection of my best projects and achievements.
@@ -92,7 +94,7 @@ const Projects = () => {
                 </motion.div>
 
             </section>
-            <Experience/>
+            <Experience />
         </div>
     );
 };
