@@ -51,10 +51,10 @@ const Navbar = () => {
                                 Projects
                             </li>
                             <li className="hover:scale-150 transform transition-transform duration-200 cursor-pointer">
-                                Certificates
+                                Experience
                             </li>
                             <li className="hover:scale-150 transform transition-transform duration-200 cursor-pointer">
-                                Experience
+                                Certificates
                             </li>
                         </ul>
                     </div>

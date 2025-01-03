@@ -6,13 +6,8 @@ import { Button } from "@/components/ui/button";
 
 const experiences = [
     {
-        date: "2023",
-        title: "Short heading here",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    },
-    {
-        date: "2022",
-        title: "Short heading here",
+        date: "November 2024-Present",
+        title: "Software Development Engineer",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
     },
     {
@@ -20,6 +15,12 @@ const experiences = [
         title: "Short heading here",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
     },
+    {
+        date: "September 2023-October 2023",
+        title: "Frontend Developer",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    },
+   
 ];
 
 export default function Experience() {
