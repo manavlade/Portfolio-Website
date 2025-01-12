@@ -2,37 +2,42 @@ import React from "react";
 import { motion } from "framer-motion";
 import AiCompanion from '../../assests/AI.png';
 import Experience from "../Shared/Experience";
+import TalentBridge from "../../assests/JobPortal.png";
+// import ChildRights from "../../assests/Childrights.jpg";
+// import task from "../../assests/";
+// import Portfolio from "../../assests";
 
 const projects = [
     {
         title: "AI Companion",
         description: "A modern, responsive website where users can talk to famous people .",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
-        image: 'AiCompanion'
+        image: AiCompanion,
+        link: "https://gomoonbeam.com"
     },
     {
         title: "TalentBridge",
         description: "An innovative platform for job seekers and talent seekers with advanced AI features",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
-        image: 'AiCompanion'
+        image: TalentBridge,
     },
     {
         title: "Child Rights Platform",
         description: "An innovative platform children to help learn about their rights ",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
-        image: 'AiCompanion'
+        image: AiCompanion,
     },
     {
         title: "Task Management System",
         description: "An innovative platform for users to manage their tasks with reminder functionality",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
-        image: 'AiCompanion'
+        image: AiCompanion,
     },
     {
         title: "Portfolio Website",
         description: "A portfolio website to showcase my skills, certficates and projects",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
-        image: 'AiCompanion'
+        image: AiCompanion,
     },
     // ...Array(4).fill({
     //     title: "Project name here",
@@ -77,7 +82,7 @@ const ProjectCard = ({ title, description, tags, delay }) => (
 const Projects = () => {
     return (
         <div>
-            <section className="py-16 px-6 lg:px-20 bg-gray-50">
+            <section className="py-16 px-6 lg:px-20 bg-gray-50" id="projects" >
                 <div className="text-center mb-12">
                     <p className="text-lg uppercase text-gray-500 tracking-wide hover:scale-110 transform transition-transform duration-200 cursor-pointer hover:underline">
                         Projects

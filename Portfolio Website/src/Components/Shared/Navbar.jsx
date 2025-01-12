@@ -14,8 +14,10 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     {/* Left: Portfolio Title */}
                     <div className="flex-shrink-0">
-                        <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-800 hover:duration-300 hover:dark:text-neutral-800">
-                            <span > Manav's Portfolio</span>
+                        <AnimatedShinyText className=" hover:scale-150 inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-800 hover:duration-300 hover:dark:text-neutral-800">
+                            <a href="/">
+                                <span > Manav's Portfolio</span>
+                            </a>
                             <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                         </AnimatedShinyText>
                     </div>
@@ -38,23 +40,24 @@ const Navbar = () => {
                             }`}
                     >
                         <ul className="flex flex-col lg:flex-row gap-5 lg:gap-10 text-center font-semibold">
+
                             <li className="hover:scale-150 transform transition-transform duration-200 cursor-pointer">
-                                Home
+                                <a href="#about">  About</a>
                             </li>
                             <li className="hover:scale-150 transform transition-transform duration-200 cursor-pointer">
-                                About
+                                <a href="#skills">Skills</a>
                             </li>
                             <li className="hover:scale-150 transform transition-transform duration-200 cursor-pointer">
-                                Skills
+                                <a href="#experience">Experience</a>
                             </li>
                             <li className="hover:scale-150 transform transition-transform duration-200 cursor-pointer">
-                                Projects
+                                <a href="#projects">Projects</a>
                             </li>
                             <li className="hover:scale-150 transform transition-transform duration-200 cursor-pointer">
-                                Experience
+                                <a href="#certificates">Certificates</a>
                             </li>
                             <li className="hover:scale-150 transform transition-transform duration-200 cursor-pointer">
-                                Certificates
+                                <a href="#faq">FAQ</a>
                             </li>
                         </ul>
                     </div>
@@ -63,13 +66,19 @@ const Navbar = () => {
                     <div className="hidden lg:flex gap-5">
                         <ul className="flex gap-7">
                             <li>
-                                <Linkedin className="hover:scale-150 transform transition-transform duration-200 cursor-pointer" />
+                                <a href="https://www.linkedin.com/in/manav-lade/">
+                                    <Linkedin className="hover:scale-150 transform transition-transform duration-200 cursor-pointer" />
+                                </a>
                             </li>
                             <li>
-                                <Github className="hover:scale-150 transform transition-transform duration-200 cursor-pointer" />
+                                <a href="https://github.com/manavlade">
+                                    <Github className="hover:scale-150 transform transition-transform duration-200 cursor-pointer" />
+                                </a>
                             </li>
                             <li>
-                                <Mail className="hover:scale-150 transform transition-transform duration-200 cursor-pointer" />
+                                <a href="mailto:your-email@example.com?subject=Hello%20there&body=I%20would%20like%20to%20discuss... ">
+                                    <Mail className=" hover:scale-150 transform transition-transform duration-200 cursor-pointer" />
+                                </a>
                             </li>
                         </ul>
                     </div>

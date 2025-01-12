@@ -3,11 +3,13 @@ import { Button } from "../ui/button";
 import { SkillIcon } from "./SkillImage";
 import { motion } from "framer-motion";
 import Projects from "../Projects/Projects";
+import { useNavigate } from "react-router-dom";
 
 const SkillText = () => {
+    const router = useNavigate();
     return (
         <div>
-            <div className="py-12 px-6 lg:px-20">
+            <div className="py-12 px-6 lg:px-20" id="skills" >
                 {/* Title Section */}
                 <motion.div
                     className="text-center mb-10"
@@ -71,11 +73,13 @@ const SkillText = () => {
 
                             {/* Action Buttons */}
                             <div className="flex gap-4 mt-6">
-                                <Button className="px-6 py-3 border border-gray-400 rounded-md hover:bg-gray-100">
+                                <Button className="px-6 py-3 border border-gray-400 rounded-md hover:bg-gray-100" onClick={() => (window.location.href = "https://github.com/manavlade")} >
                                     Learn More
                                 </Button>
                                 <Button className="px-6 py-3 bg-black text-white rounded-md hover:bg-gray-800 flex items-center gap-2">
-                                    See Projects <ArrowRightToLine />
+                                   <a href="#projects">
+                                        See Projects <ArrowRightToLine />
+                                   </a>
                                 </Button>
                             </div>
                         </div>

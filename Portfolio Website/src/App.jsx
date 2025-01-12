@@ -1,5 +1,4 @@
 import './App.css'
-import FAQ from './Components/Shared/FAQ'
 import Navbar from './Components/Shared/Navbar'
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
     <>
       <div>
       <Navbar/>
-      <FAQ/>
       </div>
 
     </>

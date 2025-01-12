@@ -2,6 +2,15 @@ import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import About from "./About";
 import RetroGrid from "../ui/retro-grid";
+import MorphingText from "../ui/morphing-text";
+import MyResume from "../../assests/Manav_Lade_Software_Developer.pdf"
+import { Download } from "lucide-react";
+
+const texts = [
+    "INSPIRE",
+    "PERFORM",
+    "TRANSFORM!"
+]
 
 const HomePage = () => {
     const textVariants = {
@@ -35,19 +44,23 @@ const HomePage = () => {
                         variants={textVariants}
                     >
                         <h1 className="text-4xl lg:text-6xl font-extrabold text-gray-800">
-                            Crafting Your Future, <br /> One Project at a Time
+                            {/* Crafting Your Future, <br /> One Project at a Time */}
+                            Code Meets Creativity: Building Solutions That
+                            <MorphingText texts={texts} /> 
                         </h1>
                         <p className="text-lg lg:text-xl text-gray-600">
-                            Welcome to my portfolio! Here, you'll discover my journey, skills,
-                            and the projects that showcase my passion and expertise.
+                            Welcome to my portfolio! Explore my journey, skills, and a curated showcase of projects that reflect my 
+                            passion, innovation, and expertise in creating impactful solutions.
                         </p>
                         <div className="flex gap-4">
-                            <Button className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800">
+                            <Button className="bg-black text-white lg:text-2xl px-6 py-3 rounded-md">
                                 Explore
                             </Button>
-                            <Button className="bg-white border border-black text-black px-6 py-3 rounded-md hover:bg-gray-100">
-                                Contact
-                            </Button>
+                            <a href={MyResume} download={"Manav_Lade_Software_Developer.pdf"} >
+                                <Button className="bg-white border border-black text-black font-bold lg:text-2xl px-6 py-3 rounded-md hover:bg-gray-100">
+                                    Download Resume <Download />
+                                </Button>
+                           </a>
                         </div>
                     </motion.div>
 
