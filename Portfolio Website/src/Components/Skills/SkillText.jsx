@@ -1,12 +1,10 @@
-import { ArrowRightToLine } from "lucide-react";
+import { ArrowRightToLine, Code, Server } from "lucide-react";
 import { Button } from "../ui/button";
 import { SkillIcon } from "./SkillImage";
 import { motion } from "framer-motion";
 import Projects from "../Projects/Projects";
-import { useNavigate } from "react-router-dom";
 
 const SkillText = () => {
-    const router = useNavigate();
     return (
         <div>
             <div className="py-12 px-6 lg:px-20" id="skills" >
@@ -48,25 +46,36 @@ const SkillText = () => {
                             </div>
 
                             {/* Skills Section */}
-                            <div className="grid grid-cols-2 gap-5">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
+                                {/* Frontend Expertise Card */}
                                 <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className="p-5 border rounded-lg shadow-lg bg-gray-50"
+                                    whileHover={{ scale: 1.05, rotate: 1 }}
+                                    className="p-6 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 border border-gray-200 rounded-xl shadow-lg transform transition duration-300"
                                 >
-                                    <h3 className="text-xl font-semibold text-gray-800">Frontend</h3>
-                                    <p className="text-gray-600 mt-2">
-                                        Expertise in crafting seamless UI/UX with React, Tailwind CSS,
-                                        and modern frontend tools.
+                                    <div className="flex items-center gap-4 mb-4">
+                                        <div className="p-3 bg-indigo-500 text-white rounded-full">
+                                            <Code className="w-6 h-6" />
+                                        </div>
+                                        <h3 className="text-2xl font-bold text-gray-800">Frontend</h3>
+                                    </div>
+                                    <p className="text-gray-700">
+                                        Expertise in crafting seamless UI/UX with React, Tailwind CSS, and modern frontend tools.
                                     </p>
                                 </motion.div>
+
+                                {/* Backend Expertise Card */}
                                 <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className="p-5 border rounded-lg shadow-lg bg-gray-50"
+                                    whileHover={{ scale: 1.05, rotate: -1 }}
+                                    className="p-6 bg-gradient-to-r from-green-100 via-teal-100 to-blue-100 border border-gray-200 rounded-xl shadow-lg transform transition duration-300"
                                 >
-                                    <h3 className="text-xl font-semibold text-gray-800">Backend</h3>
-                                    <p className="text-gray-600 mt-2">
-                                        Proficient in building robust backend systems using Node.js,
-                                        Express, and databases.
+                                    <div className="flex items-center gap-4 mb-4">
+                                        <div className="p-3 bg-green-500 text-white rounded-full">
+                                            <Server className="w-6 h-6" />
+                                        </div>
+                                        <h3 className="text-2xl font-bold text-gray-800">Backend</h3>
+                                    </div>
+                                    <p className="text-gray-700">
+                                        Proficient in building robust backend systems using Node.js, Express, and databases.
                                     </p>
                                 </motion.div>
                             </div>
@@ -76,7 +85,7 @@ const SkillText = () => {
                                 <Button className="px-6 py-3 border border-gray-400 rounded-md hover:bg-gray-100" onClick={() => (window.location.href = "https://github.com/manavlade")} >
                                     Learn More
                                 </Button>
-                                <Button className="px-6 py-3 bg-black text-white rounded-md hover:bg-gray-800 flex items-center gap-2">
+                                <Button className="px-6 py-3  bg-black text-white rounded-md hover:bg-gray-800 flex  gap-2">
                                    <a href="#projects">
                                         See Projects <ArrowRightToLine />
                                    </a>

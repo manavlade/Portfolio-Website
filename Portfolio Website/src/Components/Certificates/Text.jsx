@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import FAQ from "../Shared/FAQ";
-import {  CourseCertImages } from "./CourseCertImages";
 import CertiText from "./CertificatesText";
+import { ArrowDown } from "lucide-react";
 
 const CertificateText = () => {
     return (
@@ -39,8 +39,8 @@ const CertificateText = () => {
                     transition={{ duration: 1, delay: 0.8 }}
                 >
                     {/* Button 1: Black Background, White Text */}
-                    <button className="px-6 py-3 bg-black text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform">
-                        View Certificates
+                    <button className="px-6 py-3 bg-black text-white flex gap-5 font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform">
+                        View Certificates <ArrowDown/>
                     </button>
                 </motion.div>
             </div>

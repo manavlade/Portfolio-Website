@@ -8,19 +8,21 @@ import { Eye } from "lucide-react";
 const experiences = [
     {
         date: "November 2024-Present",
-        title: "Software Developer",
+        title: "Software Developer at Aim2Excel",
         description: "Creating Engaging websites increasing user interactivity by 15%, Creating strong API's using node.js, express.js and nest.js",
     },
     {
-        date: "August 2024-September 2024",
-        title: "Software Developer",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        date: "August 2024 - September 2024",
+        title: "Software Developer at J.P. Morgan & Chase",
+        description: "Collaborated with cross-functional teams to draft and prioritize user stories, conducted daily standups to enhance team productivity, and executed sprint reviews and retrospectives to improve future development cycles.",
     },
+
     {
-        date: "September 2023-October 2023",
-        title: "Frontend Developer",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        date: "September 2023 - October 2023",
+        title: "Frontend Developer at SYNC Interns",
+        description: "Led the development of a responsive chat web application using React.js and Node.js, integrating real-time features via WebSockets. Built a collaborative code editor with Firebase, boosting team productivity by 30%.",
     },
+
 
 ];
 
@@ -40,7 +42,7 @@ export default function Experience() {
     };
 
     return (
-        <div> 
+        <div>
             <section className="max-w-7xl mx-auto px-6 py-16" id="experience" >
                 <div className="flex flex-col lg:flex-row lg:items-center">
                     {/* Left Section */}
@@ -56,7 +58,7 @@ export default function Experience() {
                                 <Button type="button" variant="outline" className="btn lg:text-2xl btn-outline-success btn-lg">
                                     View Resume <Eye className=" items-center " size={60} />
                                 </Button>
-                            </a>    
+                            </a>
                         </div>
                     </div>
 
@@ -87,7 +89,7 @@ export default function Experience() {
                                         <h3 className="text-lg font-semibold">{exp.date}</h3>
                                         <h4 className="text-xl font-bold mb-2">{exp.title}</h4>
                                         <p className="text-gray-600 mb-4">{exp.description}</p>
-                                        
+
                                     </div>
                                 </motion.div>
                             ))}

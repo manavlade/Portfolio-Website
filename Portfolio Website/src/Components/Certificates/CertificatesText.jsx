@@ -17,12 +17,12 @@ const CertiText = () => {
     return (
         <div className="flex flex-col md:flex-row items-center justify-center px-16 py-6" id="certificates" >
             {/* Sidebar */}
-            <div className=" w-1/2 md:w-1/4 flex flex-col gap-6">
+            <div className=" w-1/2 md:w-1/4  flex flex-col gap-6">
                 {["Course Completion", "Internship Completion", "Others"].map(
                     (category) => (
                         <motion.p
                             key={category}
-                            className={`text-lg font-semibold cursor-pointer ${selectedCategory === category
+                            className={`text-2xl font-bold cursor-pointer ${selectedCategory === category
                                     ? "text-black border-b-2 border-black"
                                     : "text-gray-500 hover:text-black"
                                 }`}
@@ -37,7 +37,7 @@ const CertiText = () => {
 
             {/* Content */}
             <motion.div
-                className="flex-1"
+                className="flex-1 lg:text-xl gap-5"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"

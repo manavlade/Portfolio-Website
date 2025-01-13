@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import AiCompanion from '../../assests/AI.png';
 import Experience from "../Shared/Experience";
 import TalentBridge from "../../assests/JobPortal.png";
-// import ChildRights from "../../assests/Childrights.jpg";
-// import task from "../../assests/";
-// import Portfolio from "../../assests";
+import ChildRights from "../../assests/Childrights.jpg";
+import Task from "../../assests/task.png";
+import Portfolio from "../../assests/portfolio.png";
 
 const projects = [
     {
@@ -13,31 +13,35 @@ const projects = [
         description: "A modern, responsive website where users can talk to famous people .",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
         image: AiCompanion,
-        link: "https://gomoonbeam.com"
+        link: "https://github.com/manavlade/Ai-Companion"
     },
     {
         title: "TalentBridge",
         description: "An innovative platform for job seekers and talent seekers with advanced AI features",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
         image: TalentBridge,
+        link: "https://github.com/manavlade/Job-Search-Platform"
     },
     {
         title: "Child Rights Platform",
         description: "An innovative platform children to help learn about their rights ",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
-        image: AiCompanion,
+        image: ChildRights,
+        link:"https://github.com/manavlade/Child-Rights-Portal"
     },
     {
         title: "Task Management System",
         description: "An innovative platform for users to manage their tasks with reminder functionality",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
-        image: AiCompanion,
+        image: Task,
+        link: "https://github.com/manavlade/Task-Management-App"
     },
     {
         title: "Portfolio Website",
         description: "A portfolio website to showcase my skills, certficates and projects",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
-        image: AiCompanion,
+        image: Portfolio,
+        link: "https://manavladeportfolio.netlify.app/"
     },
     // ...Array(4).fill({
     //     title: "Project name here",
@@ -48,7 +52,8 @@ const projects = [
     // }),
 ];
 
-const ProjectCard = ({ title, description, tags, delay }) => (
+
+const ProjectCard = ({ title, description, tags, image, link, delay }) => (
     <motion.div
         className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
         whileHover={{ scale: 1.03 }}
@@ -56,8 +61,8 @@ const ProjectCard = ({ title, description, tags, delay }) => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay }}
     >
-        <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg flex items-center justify-center">
-            <img src={AiCompanion} alt={title} />
+        <div className="w-full h-56 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+            <img src={image} alt={title} className="object-cover w-full h-full" />
         </div>
         <div className="mt-4">
             <h3 className="text-lg font-bold">{title}</h3>
@@ -72,9 +77,14 @@ const ProjectCard = ({ title, description, tags, delay }) => (
                     </span>
                 ))}
             </div>
-            <button className="mt-4 text-black text-sm font-medium hover:underline">
+            <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-black text-sm font-medium hover:underline"
+            >
                 View project &rarr;
-            </button>
+            </a>
         </div>
     </motion.div>
 );
@@ -82,7 +92,7 @@ const ProjectCard = ({ title, description, tags, delay }) => (
 const Projects = () => {
     return (
         <div>
-            <section className="py-16 px-6 lg:px-20 bg-gray-50" id="projects" >
+            <section className="py-16 px-6 lg:px-20 bg-gray-50" id="projects">
                 <div className="text-center mb-12">
                     <p className="text-lg uppercase text-gray-500 tracking-wide hover:scale-110 transform transition-transform duration-200 cursor-pointer hover:underline">
                         Projects
@@ -114,7 +124,9 @@ const Projects = () => {
                             title={project.title}
                             description={project.description}
                             tags={project.tags}
-                            delay={index * 0.3} // Individual delay for each card
+                            image={project.image}
+                            link={project.link} // Pass link for navigation
+                            delay={index * 0.3} // Add delay to stagger animations
                         />
                     ))}
                 </motion.div>
