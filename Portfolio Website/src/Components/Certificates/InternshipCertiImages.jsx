@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import JP from "../../Certificates/JPMorganCerti.png"
 import SYNC from "../../Certificates/CERTI_SYNC.jpg"
+import HPE from "../../Certificates/HPEI.jpeg"
 
 const cards = [
     {
@@ -20,7 +21,7 @@ const cards = [
     {
         description: "Certificate of completion for the Software Development Internship at Hewlett Packard Enterprise (HPE).",
         title: "HPE - Software Development Internship Certificate",
-        src: "https://assets.aceternity.com/demos/metallica.jpeg",
+        src: HPE,
         ctaText: "View Certificate",
     },
 ];

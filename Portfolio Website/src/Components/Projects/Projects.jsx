@@ -1,6 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
-import AiCompanion from '../../assests/AI.png';
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import AiCompanion from "../../assests/AI.png";
 import Experience from "../Shared/Experience";
 import TalentBridge from "../../assests/JobPortal.png";
 import ChildRights from "../../assests/Childrights.jpg";
@@ -10,91 +10,88 @@ import Portfolio from "../../assests/portfolio.png";
 const projects = [
     {
         title: "AI Companion",
-        description: "A modern, responsive website where users can talk to famous people .",
+        description: "A modern, responsive website where users can talk to famous people.",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
         image: AiCompanion,
-        link: "https://github.com/manavlade/Ai-Companion"
+        link: "https://github.com/manavlade/Ai-Companion",
     },
     {
         title: "TalentBridge",
-        description: "An innovative platform for job seekers and talent seekers with advanced AI features",
+        description: "An innovative platform for job seekers and talent seekers with advanced AI features.",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
         image: TalentBridge,
-        link: "https://github.com/manavlade/Job-Search-Platform"
+        link: "https://github.com/manavlade/Job-Search-Platform",
     },
     {
         title: "Child Rights Platform",
-        description: "An innovative platform children to help learn about their rights ",
+        description: "An innovative platform for children to help learn about their rights.",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
         image: ChildRights,
-        link:"https://github.com/manavlade/Child-Rights-Portal"
+        link: "https://github.com/manavlade/Child-Rights-Portal",
     },
     {
         title: "Task Management System",
-        description: "An innovative platform for users to manage their tasks with reminder functionality",
+        description: "An innovative platform for users to manage their tasks with reminder functionality.",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
         image: Task,
-        link: "https://github.com/manavlade/Task-Management-App"
+        link: "https://github.com/manavlade/Task-Management-App",
     },
     {
         title: "Portfolio Website",
-        description: "A portfolio website to showcase my skills, certficates and projects",
+        description: "A portfolio website to showcase my skills, certificates, and projects.",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
         image: Portfolio,
-        link: "https://manavladeportfolio.netlify.app/"
+        link: "https://manavladeportfolio.netlify.app/",
     },
-    // ...Array(4).fill({
-    //     title: "Project name here",
-    //     description:
-    //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    //     tags: ["Feature A", "Feature B", "Feature C"],
-    //     image: 'AiCompanion'
-    // }),
 ];
 
+const ProjectCard = ({ title, description, tags, image, link }) => {
+    const cardRef = useRef(null); // Reference for individual card
+    const isInView = useInView(cardRef, { once: true, margin: "-10% 0px -10% 0px" }); // Trigger animation when in view
 
-const ProjectCard = ({ title, description, tags, image, link, delay }) => (
-    <motion.div
-        className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
-        whileHover={{ scale: 1.03 }}
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay }}
-    >
-        <div className="w-full h-56 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
-            <img src={image} alt={title} className="object-cover w-full h-full" />
-        </div>
-        <div className="mt-4">
-            <h3 className="text-lg font-bold">{title}</h3>
-            <p className="text-sm text-gray-600 mt-2">{description}</p>
-            <div className="flex flex-wrap gap-2 mt-3">
-                {tags.map((tag, index) => (
-                    <span
-                        key={index}
-                        className="text-xs font-medium bg-gray-100 text-gray-800 px-3 py-1 rounded-full"
-                    >
-                        {tag}
-                    </span>
-                ))}
+    return (
+        <motion.div
+            ref={cardRef}
+            className="bg-gradient-to-r from-white via-gray-50 to-gray-100 shadow-md rounded-lg p-6 hover:shadow-xl transform transition-all duration-300"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.5 }}
+        >
+            <div className="w-full h-56 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden shadow-sm">
+                <img src={image} alt={title} className="object-cover w-full h-full" />
             </div>
-            <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-block text-black text-sm font-medium hover:underline"
-            >
-                View project &rarr;
-            </a>
-        </div>
-    </motion.div>
-);
+            <div className="mt-4">
+                <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+                <p className="text-sm text-gray-600 mt-2">{description}</p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                    {tags.map((tag, index) => (
+                        <span
+                            key={index}
+                            className="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full shadow-sm"
+                        >
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+                <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block text-black text-sm font-medium hover:underline"
+                >
+                    View project &rarr;
+                </a>
+            </div>
+        </motion.div>
+    );
+};
 
 const Projects = () => {
     return (
         <div>
-            <section className="py-16 px-6 lg:px-20 bg-gray-50" id="projects">
+            <section className="py-16 px-6 lg:px-20 bg-gradient-to-b from-white to-gray-50" id="projects">
                 <div className="text-center mb-12">
-                    <p className="text-lg uppercase text-gray-500 tracking-wide hover:scale-110 transform transition-transform duration-200 cursor-pointer hover:underline">
+                    <p className="text-lg uppercase text-gray-500 tracking-wide">
                         Projects
                     </p>
                     <h2 className="text-2xl lg:text-5xl font-extrabold text-gray-900 mt-2">
@@ -104,20 +101,7 @@ const Projects = () => {
                         A collection of my best projects and achievements.
                     </p>
                 </div>
-                <motion.div
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: {
-                            opacity: 1,
-                            transition: {
-                                staggerChildren: 0.3, // Stagger animation for children
-                            },
-                        },
-                    }}
-                >
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <ProjectCard
                             key={index}
@@ -125,11 +109,10 @@ const Projects = () => {
                             description={project.description}
                             tags={project.tags}
                             image={project.image}
-                            link={project.link} // Pass link for navigation
-                            delay={index * 0.3} // Add delay to stagger animations
+                            link={project.link}
                         />
                     ))}
-                </motion.div>
+                </div>
             </section>
             <Experience />
         </div>
