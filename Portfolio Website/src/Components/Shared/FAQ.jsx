@@ -1,12 +1,7 @@
 import { motion, useInView } from "framer-motion";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
 import { useRef } from "react";
 import { HelpCircle, Mail, Globe, Shield, Layers } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 
 const FAQ = () => {
     const ref = useRef(null);
