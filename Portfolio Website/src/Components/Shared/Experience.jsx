@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import CertificateText from "../Certificates/Text";
 import MyResume from "../../assests/Manav_Lade_Software_Developer.pdf"
 import { Eye } from "lucide-react";
+import { Button } from "../ui/button";
 
 const experiences = [
     {

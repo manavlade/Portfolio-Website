@@ -27,7 +27,7 @@ function App() {
           <meta name="twitter:card" content="summary_large_image" />
         </Helmet>
         
-        <Navbar />
+        <Navbar />e
       </div>
 
     </>
