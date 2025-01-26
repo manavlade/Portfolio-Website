@@ -2,11 +2,13 @@ import { Helmet } from 'react-helmet'
 import './App.css'
 import Navbar from './Components/Shared/Navbar'
 import titleimg from "../src/assests/titleimg.png"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
     <>
       <div>
+        {/* <SpeedInsights/> */}
         <Helmet>
           <title>Manav Lade | Full Stack Developer Portfolio</title>
           <meta
@@ -27,7 +29,7 @@ function App() {
           <meta name="twitter:card" content="summary_large_image" />
         </Helmet>
         
-        <Navbar />e
+        <Navbar />
       </div>
 
     </>

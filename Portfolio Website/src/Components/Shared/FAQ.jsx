@@ -26,9 +26,10 @@ const FAQ = () => {
             value: "item-1",
             question: "What services do you offer?",
             answer:
-                "I provide comprehensive services, including web design, frontend development, and backend development, aimed at empowering businesses to establish a robust online presence. Each project is meticulously customized to align with the unique goals and requirements of my clients.",
+                "I provide comprehensive services, including web design, frontend development, backend development, and deployment, aimed at empowering businesses to establish a robust online presence. Each project is meticulously customized to align with the unique goals and requirements of my clients.",
             icon: <HelpCircle className="w-6 h-6 text-blue-500" />,
         },
+
         {
             value: "item-2",
             question: "How can I contact you?",

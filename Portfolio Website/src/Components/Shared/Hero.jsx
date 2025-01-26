@@ -10,7 +10,7 @@ import Gif from "../../assests/Web Development (1).mp4";
 import Gif2 from "../../assests/Web Development.mp4";
 
 const texts = ["INSPIRE!", "PERFORM!", "TRANSFORM!"];
-
+    
 const HomePage = () => {
     const textVariants = {
         hidden: { opacity: 0, x: -50 },

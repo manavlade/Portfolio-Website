@@ -82,17 +82,8 @@ const SkillsSection = () => {
             gradient: "from-white via-gray-100 to-gray-200",
             items: [
                 { name: "OAuth2", description: "Authorization framework" },
-                { name: "Passport.js", description: "Middleware for authentication" },
-                { name: "Firebase Auth", description: "Authentication service by Firebase" },
-            ],
-        },
-        {
-            title: "Networking Concepts",
-            icon: <Server className="w-8 h-8 text-orange-500" />,
-            gradient: "from-white via-gray-100 to-gray-200",
-            items: [
-                { name: "HTTP", description: "HyperText Transfer Protocol" },
                 { name: "JWT-based Authentication", description: " Stateless Authentication" },
+                { name: "Firebase Auth", description: "Authentication service by Firebase" },
             ],
         },
     ];

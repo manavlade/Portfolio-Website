@@ -56,7 +56,7 @@ export default function Experience() {
                         <div className="flex gap-4  ">
                             <a href={MyResume} target="_blank" rel="noopener noreferrer">
                                 <Button type="button" variant="outline" className="btn lg:text-2xl btn-outline-success btn-lg">
-                                    View Resume <Eye className=" items-center " size={60} />
+                                    View My Resume <Eye className=" items-center " size={60} />
                                 </Button>
                             </a>
                         </div>
