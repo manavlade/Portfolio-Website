@@ -81,7 +81,7 @@ const SkillsSection = () => {
             icon: <Lock className="w-8 h-8 text-teal-500" />,
             gradient: "from-white via-gray-100 to-gray-200",
             items: [
-                { name: "OAuth2", description: "Authorization framework" },
+                { name: "Clerk", description: "Authorization framework" },
                 { name: "JWT-based Authentication", description: " Stateless Authentication" },
                 { name: "Firebase Auth", description: "Authentication service by Firebase" },
             ],
