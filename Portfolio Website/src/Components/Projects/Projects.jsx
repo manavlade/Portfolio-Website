@@ -32,7 +32,7 @@ const projects = [
     {
         title: "Task Management System",
         description: "An innovative platform for users to manage their tasks with reminder functionality.",
-        tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
+        tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX", "Data Analytics"],
         image: Task,
         link: "https://github.com/manavlade/Task-Management-App",
     },
