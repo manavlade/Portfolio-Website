@@ -61,6 +61,8 @@ const SkillsSection = () => {
             gradient: "from-white via-gray-100 to-gray-200",
             items: [
                 { name: "S3", description: "Scalable object storage service" },
+                { name: "EC2", description: "Virtual servers in the cloud" },
+                { name: "IAM", description: "Identity and Access Management" },
                 { name: "Lambda Functions", description: "Event-driven serverless compute" },
                 { name: "CloudWatch", description: "Monitoring and management service" },
             ],
@@ -84,6 +86,7 @@ const SkillsSection = () => {
                 { name: "Clerk", description: "Authorization framework" },
                 { name: "JWT-based Authentication", description: " Stateless Authentication" },
                 { name: "Firebase Auth", description: "Authentication service by Firebase" },
+                { name: "OTP Authentication", description: "Authentication using OTP" },
             ],
         },
     ];
@@ -104,9 +107,9 @@ const SkillsSection = () => {
     return (
         <section
             ref={ref}
-            className="min-h-screen py-16 px-5 bg-gradient-to-b from-white to-gray-50"
+            className="min-h-screen py-16 bg-gradient-to-b from-white to-gray-50"
         >
-            <div className="max-w-7xl mx-auto">
+            <div>
                 <motion.div
                     initial={{ opacity: 0, y: -30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}

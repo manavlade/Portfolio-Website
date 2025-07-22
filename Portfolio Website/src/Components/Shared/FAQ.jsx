@@ -61,7 +61,7 @@ const FAQ = () => {
     ];
 
     return (
-        <div ref={ref} className="p-8 bg-gradient-to-b from-white to-gray-50" id="faq">
+        <div ref={ref} className="px-8 py-16 bg-gradient-to-b from-white to-gray-50" id="faq">
             {/* FAQ Header */}
             <motion.div
                 initial={{ opacity: 0, y: -20 }}

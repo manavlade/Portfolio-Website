@@ -32,7 +32,7 @@ const About = () => {
             <section ref={ref} className="bg-gradient-to-b from-white to-gray-50 lg:min-h-screen lg:py-20" id="about">
                 {/* Header Section */}
                 <motion.div
-                    className="max-w-6xl mx-auto text-center"
+                    className="w-[90%] mx-auto text-center"
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     variants={textVariants}
@@ -47,10 +47,10 @@ const About = () => {
                 </motion.div>
 
                 {/* Content Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 lg:mt-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-3 w-[90%] mx-auto mt-10 lg:mt-16 items-center">
                     {/* Left Column */}
                     <motion.div
-                        className="space-y-6"
+                        className="space-y-10"
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
                         variants={cardVariants}
@@ -84,13 +84,13 @@ const About = () => {
                         <img
                             src={myPic}
                             alt="About Me"
-                            className="rounded-full shadow-lg w-96 h-96 object-cover hover:scale-105 transition-transform duration-300"
+                            className="rounded-full shadow-lg w-80 h-80 object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </motion.div>
 
                     {/* Right Column */}
                     <motion.div
-                        className="space-y-6"
+                        className="space-y-10"
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
                         variants={cardVariants}

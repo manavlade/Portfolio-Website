@@ -9,12 +9,23 @@ const experiences = [
     {
         date: "November 2024-Present",
         title: "Software Developer at Aim2Excel",
-        description: "Creating Engaging websites increasing user interactivity by 15%, Creating strong API's using node.js, express.js and nest.js",
+        description: `
+        <b> Early Fit Platform - Full Stack Developer | HealthTech Web Platform  </b> 
+        <b> Tech Stack: Next.js, TypeScript, TanStack Query, Tailwind CSS, ShadCN UI, React Context API </b>
+        Developed a multi-role healthcare platform featuring patient, consultant, and admin portals, built for performance, security, and scalability across diverse user roles.
+        Architected a Metabolic Form Builder, a dynamic multi-step form with OTP-based phone number verification, enabling personalized data capture. Integrated TanStack Query and Context API for smooth data flow and state management.
+        Built client's comprehensive Health & Wellness website with SEO-optimized routes with 4 interactive health calculators (BMI, BMR, Calorie, Waist-to-Hip), increasing organic traffic by 30%.
+        <b> Integrated Google Tag Manager and Meta Pixel, </b> enabling data-driven user behavior insights that improved marketing effectiveness.
+        <b> Engineered role-based portals: </b>
+        <b> Early Fit Front </b>: Enabled patients to book video consultations, receive prescriptions, make subscription payments and access therapy resources and authenticated users using <b> OTP based authentication </b>.
+        <b> Early Fit Consultant </b>: Empowered doctors to manage appointments, issue prescriptions, and provide treatment plans.
+        <b> Early Fit Admin </b>: Built admin dashboard with full CRUD capabilities for managing users, content, plans, consultants and appointments.
+        `,
     },
     {
         date: "August 2024 - September 2024",
-        title: "Software Developer at J.P. Morgan & Chase",
-        description: "Collaborated with cross-functional teams to draft and prioritize user stories, conducted daily standups to enhance team productivity, and executed sprint reviews and retrospectives to improve future development cycles.",
+        title: "Agile Job Simulation at J.P. Morgan & Chase",
+        description: "Intro	to	Agile, Scrum at JPMC, User Stories, Backlog	Refinement, Daily Standups"
     },
 
     {
@@ -25,6 +36,18 @@ const experiences = [
 
 
 ];
+
+function formatDescription(description) {
+    // Replace commas with line breaks
+    let formatted = description.replace(/\n\s*/g, '<br/>');
+
+    // Preserve <b> tags (since they are already in your string)
+    // Optionally, trim extra spaces
+    formatted = formatted.trim();
+
+    return { __html: formatted };
+}
+
 
 export default function Experience() {
     const lineVariants = {
@@ -43,7 +66,7 @@ export default function Experience() {
 
     return (
         <div>
-            <section className="max-w-7xl mx-auto px-6 py-16" id="experience" >
+            <section className="w-[90%] mx-auto py-16" id="experience" >
                 <div className="flex flex-col lg:flex-row lg:items-center">
                     {/* Left Section */}
                     <div className="lg:w-1/3 mb-12 lg:mb-0">
@@ -71,7 +94,7 @@ export default function Experience() {
                             variants={lineVariants}
                             className="absolute left-4 top-0 w-1 bg-gray-300"
                         />
-                        <div className="space-y-16 relative">
+                        <div className="space-y-10 relative">
                             {experiences.map((exp, i) => (
                                 <motion.div
                                     key={i}
@@ -88,7 +111,12 @@ export default function Experience() {
                                     <div>
                                         <h3 className="text-lg font-semibold">{exp.date}</h3>
                                         <h4 className="text-xl font-bold mb-2">{exp.title}</h4>
-                                        <p className="text-gray-600 mb-4">{exp.description}</p>
+                                        <p
+                                            className="text-gray-600 text-md mb-4"
+                                            dangerouslySetInnerHTML={formatDescription(exp.description)}
+                                        />
+
+
 
                                     </div>
                                 </motion.div>

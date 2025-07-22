@@ -7,11 +7,11 @@ import { useRef } from "react";
 
 const SkillText = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "0px 0px -20% 0px" }); // Observe with margin offset
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -20% 0px" }); 
 
     return (
         <div>
-            <div ref={ref} className="py-16 px-8 lg:px-20 bg-gradient-to-b from-white to-gray-100 text-black" id="skills">
+            <div ref={ref} className="py-16 w-[90%] mx-auto bg-transparent text-black" id="skills">
                 {/* Title Section */}
                 <motion.div
                     className="text-center mb-12"
@@ -99,7 +99,7 @@ const SkillText = () => {
 
                             {/* Action Buttons */}
                             <motion.div
-                                className="flex gap-6 mt-10 items-center justify-center"
+                                className="flex gap-6 mt-10 items-center bg-transparent justify-center"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}

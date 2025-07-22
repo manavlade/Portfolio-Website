@@ -19,7 +19,7 @@ const CertiText = () => {
     };
 
     return (
-        <div ref={sectionRef} className="flex flex-col md:flex-row items-center justify-center px-16 py-12 bg-gradient-to-b from-white to-gray-50" id="certificates">
+        <div ref={sectionRef} className="flex flex-col md:flex-row items-center justify-center w-[90%] mx-auto py-12 bg-gradient-to-b from-white to-gray-50" id="certificates">
             {/* Sidebar */}
             <motion.div
                 className="w-1/2 md:w-1/4 flex flex-col gap-6"

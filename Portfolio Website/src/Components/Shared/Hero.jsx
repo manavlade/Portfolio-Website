@@ -56,7 +56,7 @@ const HomePage = () => {
         <div>
             <RetroGrid />
             <div className="min-h-screen sm:mt-2 md:mt-3 flex items-center justify-center px-5">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-6xl w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-[90%] mx-auto">
                     {/* Left Content Section */}
                     <motion.div
                         className="space-y-6"

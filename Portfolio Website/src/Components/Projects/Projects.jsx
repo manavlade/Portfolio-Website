@@ -46,8 +46,8 @@ const projects = [
 ];
 
 const ProjectCard = ({ title, description, tags, image, link }) => {
-    const cardRef = useRef(null); // Reference for individual card
-    const isInView = useInView(cardRef, { once: true, margin: "-10% 0px -10% 0px" }); // Trigger animation when in view
+    const cardRef = useRef(null); 
+    const isInView = useInView(cardRef, { once: true, margin: "-10% 0px -10% 0px" }); 
 
     return (
         <motion.div
