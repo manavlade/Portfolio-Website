@@ -6,8 +6,30 @@ import TalentBridge from "../../assests/JobPortal.png";
 import ChildRights from "../../assests/Childrights.jpg";
 import Task from "../../assests/task.png";
 import Portfolio from "../../assests/portfolio.png";
+import EarlyFit from "../../assests/early.png";
 
 const projects = [
+    {
+        title: "Early Fit – Personalized Fitness & Wellness Assistant",
+        description: "Fitness platform with OTP-auth forms, Razorpay payments, real time chat patient, consultant and admin panels",
+        tags: ["HealthTech", "Full Stack", "AI Insights", "Metabolic Form", "Consultation", "Fitness", "SEO", "Responsive UI"],
+        image: EarlyFit,
+        link: "https://early.fit/",
+    },
+    {
+        title: "AI-Powered Task Management System",
+        description: "Smart task manager with AI-driven features like smart assistant, sentiment analysis and many more... Features include visual analytics and a modern responsive UI.",
+        tags: ["AI Integration", "Smart Prioritization", "Sentiment Analysis", "Responsive", "Modern UI/UX", "Data Visualization"],
+        image: Task,
+        link: "https://github.com/manavlade/Task-Management-App",
+    },
+    {
+        title: "TalentBridge",
+        description: "An innovative platform for job seekers and talent seekers with role based access and a modern responsive UI.",
+        tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
+        image: TalentBridge,
+        link: "https://github.com/manavlade/Job-Search-Platform",
+    },
     {
         title: "AI Companion",
         description: "A modern, responsive website where users can talk to famous people.",
@@ -16,25 +38,11 @@ const projects = [
         link: "https://github.com/manavlade/Ai-Companion",
     },
     {
-        title: "TalentBridge",
-        description: "An innovative platform for job seekers and talent seekers with advanced AI features.",
-        tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
-        image: TalentBridge,
-        link: "https://github.com/manavlade/Job-Search-Platform",
-    },
-    {
         title: "Child Rights Platform",
-        description: "An innovative platform for children to help learn about their rights.",
+        description: "An innovative platform for children to help learn about their rights through games.",
         tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX"],
         image: ChildRights,
         link: "https://github.com/manavlade/Child-Rights-Portal",
-    },
-    {
-        title: "Task Management System",
-        description: "An innovative platform for users to manage their tasks with reminder functionality.",
-        tags: ["User-Friendly", "Productivity", "Responsive", "Modern", "UI/UX", "Data Analytics"],
-        image: Task,
-        link: "https://github.com/manavlade/Task-Management-App",
     },
     {
         title: "Portfolio Website",
@@ -44,15 +52,14 @@ const projects = [
         link: "https://manavladeportfolio.netlify.app/",
     },
 ];
-
 const ProjectCard = ({ title, description, tags, image, link }) => {
-    const cardRef = useRef(null); 
-    const isInView = useInView(cardRef, { once: true, margin: "-10% 0px -10% 0px" }); 
+    const cardRef = useRef(null);
+    const isInView = useInView(cardRef, { once: true, margin: "-10% 0px -10% 0px" });
 
     return (
         <motion.div
             ref={cardRef}
-            className="bg-gradient-to-r from-white via-gray-50 to-gray-100 shadow-md rounded-lg p-6 hover:shadow-xl transform transition-all duration-300"
+            className="flex flex-col bg-gradient-to-r from-white via-gray-50 to-gray-100 shadow-md rounded-lg p-4 hover:shadow-xl transform transition-all duration-300"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.5 }}
@@ -60,9 +67,13 @@ const ProjectCard = ({ title, description, tags, image, link }) => {
             <div className="w-full h-56 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden shadow-sm">
                 <img src={image} alt={title} className="object-cover w-full h-full" />
             </div>
-            <div className="mt-4">
+
+            {/* Content */}
+            <div className="mt-4 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-                <p className="text-sm text-gray-600 mt-2">{description}</p>
+                <p className="text-sm text-gray-600 mt-2 flex-grow">{description}</p>
+
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mt-3">
                     {tags.map((tag, index) => (
                         <span
@@ -73,18 +84,23 @@ const ProjectCard = ({ title, description, tags, image, link }) => {
                         </span>
                     ))}
                 </div>
-                <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-black text-sm font-medium hover:underline"
-                >
-                    View project &rarr;
-                </a>
+
+                {/* Link aligned at bottom */}
+                <div className="mt-auto pt-4">
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-black text-sm font-medium hover:underline"
+                    >
+                        View project &rarr;
+                    </a>
+                </div>
             </div>
         </motion.div>
     );
 };
+
 
 const Projects = () => {
     return (
