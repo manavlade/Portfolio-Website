@@ -24,7 +24,7 @@ const FAQ = () => {
     const faqItems = [
         {
             value: "item-1",
-            question: "What services do you offer?",
+            question: "What services do I offer?",
             answer:
                 "I provide comprehensive services, including web design, frontend development, backend development, and deployment, aimed at empowering businesses to establish a robust online presence. Each project is meticulously customized to align with the unique goals and requirements of my clients.",
             icon: <HelpCircle className="w-6 h-6 text-blue-500" />,
@@ -39,21 +39,21 @@ const FAQ = () => {
         },
         {
             value: "item-3",
-            question: "What is your experience?",
+            question: "What is my experience?",
             answer:
                 "I have  one year of hands-on experience developing scalable and user-centric web applications using React.js, Next.js, and the MERN stack, with a diverse portfolio showcasing efficient and responsive solutions for various clients while staying updated with industry trends.",
             icon: <Globe className="w-6 h-6 text-purple-500" />,
         },
         {
             value: "item-4",
-            question: "Do you provide support?",
+            question: "Do I provide support?",
             answer:
                 "Yes, I offer ongoing support for all my projects. Whether you need technical assistance or updates, I'm here to help. My aim is to ensure your satisfaction long after the project is completed.",
             icon: <Shield className="w-6 h-6 text-red-500" />,
         },
         {
             value: "item-5",
-            question: "Can I see your portfolio?",
+            question: "Can you see my portfolio?",
             answer:
                 "Absolutely! You can view my portfolio on the dedicated section of my website. It includes examples of my previous work and my work experience. I encourage you to explore it to see my capabilities.",
             icon: <Layers className="w-6 h-6 text-orange-500" />,

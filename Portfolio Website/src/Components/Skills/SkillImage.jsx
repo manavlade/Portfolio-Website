@@ -19,6 +19,7 @@ const SkillsSection = () => {
                 { name: "Node.js", description: "A runtime for building server-side applications" },
                 { name: "Express.js", description: "A lightweight Node.js framework" },
                 { name: "Nest.js", description: "A framework for building scalable Node.js apps" },
+                {name: "FAST API", description: "A framework for building scalable python apps"},
             ],
         },
         {
@@ -40,6 +41,7 @@ const SkillsSection = () => {
                 { name: "Redis", description: "In-memory key-value store for caching" },
                 { name: "MySQL", description: "Relational database management system" },
                 { name: "Prisma", description: "Type-safe database ORM" },
+                {name: "Pinecone", description: "Vector database for AI applications"},
             ],
         },
         {
