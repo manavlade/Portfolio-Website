@@ -15,11 +15,14 @@ const experiences = [
         Developed a multi-role healthcare platform featuring patient, consultant, and admin portals, built for performance, security, and scalability across diverse user roles.
         Architected a Metabolic Form Builder, a dynamic multi-step form with OTP-based phone number verification, enabling personalized data capture. Integrated TanStack Query and Context API for smooth data flow and state management.
         Built client's comprehensive Health & Wellness website with SEO-optimized routes with 4 interactive health calculators (BMI, BMR, Calorie, Waist-to-Hip), increasing organic traffic by 30%.
-        <b> Integrated Google Tag Manager and Meta Pixel, </b> enabling data-driven user behavior insights that improved marketing effectiveness.
-        <b> Engineered role-based portals: </b>
-        <b> Early Fit Front </b>: Enabled patients to book video consultations, receive prescriptions, make subscription payments and access therapy resources and authenticated users using <b> OTP based authentication </b>.
-        <b> Early Fit Consultant </b>: Empowered doctors to manage appointments, issue prescriptions, and provide treatment plans.
-        <b> Early Fit Admin </b>: Built admin dashboard with full CRUD capabilities for managing users, content, plans, consultants and appointments.
+         Integrated Google Tag Manager and Meta Pixel, enabling data-driven user behavior insights that improved marketing effectiveness.
+         Engineered role-based portals: 
+         Early Fit Patient : Enabled patients to book video consultations, receive prescriptions, make subscription payments and access therapy resources and authenticated users using OTP based authentication.
+         Early Fit Consultant : Empowered doctors to manage appointments, issue prescriptions, and provide treatment plans.
+         Early Fit Admin : Built admin dashboard with full CRUD capabilities for managing users, content, plans, consultants and appointments.
+        Rebuilt the CJ Betting platform and company website with Next.js, TypeScript, ShadCN UI, TanStack Query, Tailwind CSS, and Framer Motion for high performance and engaging UI. 
+        Handled deployment, hosting, and domain management end-to-end, ensuring reliable production delivery (<a href="https://www.shruttibose.com/">shruttibose.com</a>)
+        Collaborated with cross-functional teams, applying strong communication, organizational skills, and customer service mindset to deliver projects ahead of schedule. 
         `,
     },
     {
