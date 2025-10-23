@@ -7,23 +7,25 @@ import { Button } from "../ui/button";
 
 const experiences = [
     {
-        date: "November 2024-Present",
-        title: "Software Developer at Aim2Excel",
+        date: "Aug 2025 – Present",
+        title: "Chief Technical Officer — Illusion AI",
         description: `
-        <b> Early Fit Platform - Full Stack Developer | HealthTech Web Platform  </b> 
-        <b> Tech Stack: Next.js, TypeScript, TanStack Query, Tailwind CSS, ShadCN UI, React Context API </b>
-        Developed a multi-role healthcare platform featuring patient, consultant, and admin portals, built for performance, security, and scalability across diverse user roles.
-        Architected a Metabolic Form Builder, a dynamic multi-step form with OTP-based phone number verification, enabling personalized data capture. Integrated TanStack Query and Context API for smooth data flow and state management.
-        Built client's comprehensive Health & Wellness website with SEO-optimized routes with 4 interactive health calculators (BMI, BMR, Calorie, Waist-to-Hip), increasing organic traffic by 30%.
-         Integrated Google Tag Manager and Meta Pixel, enabling data-driven user behavior insights that improved marketing effectiveness.
-         Engineered role-based portals: 
-         Early Fit Patient : Enabled patients to book video consultations, receive prescriptions, make subscription payments and access therapy resources and authenticated users using OTP based authentication.
-         Early Fit Consultant : Empowered doctors to manage appointments, issue prescriptions, and provide treatment plans.
-         Early Fit Admin : Built admin dashboard with full CRUD capabilities for managing users, content, plans, consultants and appointments.
-        Rebuilt the CJ Betting platform and company website with Next.js, TypeScript, ShadCN UI, TanStack Query, Tailwind CSS, and Framer Motion for high performance and engaging UI. 
-        Handled deployment, hosting, and domain management end-to-end, ensuring reliable production delivery (<a href="https://www.shruttibose.com/">shruttibose.com</a>)
-        Collaborated with cross-functional teams, applying strong communication, organizational skills, and customer service mindset to deliver projects ahead of schedule. 
-        `,
+        Architected and delivered AI-driven full-stack solutions end-to-end, ensuring <b> scalability, performance, security, and reliability </b> across cloud-native infrastructure. Built and launched the company’s landing page and product suite using <b> Next.js, Node.js, MongoDB, Pinecone, and GenAI </b>, significantly boosting brand visibility and user engagement.
+        Designing and implementing back-end infrastructure for upcoming AI automation products using <b> Supabase, REST APIs, microservices, and containerization </b> for seamless integrations and rapid feature delivery.
+        Driving product strategy with strong technical ownership, innovation, and leadership to accelerate development and delivery.
+    `
+    },
+    {
+        date: "Nov 2024 – July 2025",
+        title: "Software Developer Intern — Aim2Excel",
+        description: `
+    Built a production-scale multi-role HealthTech platform (patient, consultant, admin) using <b> Next.js, TypeScript, TanStack Query, and ShadCN UI </b> with OTP authentication.  
+    Developed a dynamic <b> Metabolic Form Builder </b> & 4 interactive health calculators (<b> BMI, BMR, Calorie, W/H ratio </b>), increasing engagement and SEO traffic.  
+    Integrated <b> Razorpay </b> for subscription payments and implemented secure role-based route protection.  
+    Added <b> Google Tag Manager </b> & <b> Meta Pixel </b> for marketing analytics and growth tracking.
+    <b> Collaborated directly with clients to gather requirements, </b> resolve issues, and ensure project delivery; <b> owned end-to-end deployment, hosting and domain management (e.g., shruttibose.com). </b>
+    <b> Collaborated with cross-functional teams, </b> applying strong communication, organizational skills, and customer service mindset to deliver high-quality solutions ahead of schedule.
+    `
     },
     {
         date: "August 2024 - September 2024",

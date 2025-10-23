@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { HelpCircle, Mail, Globe, Shield, Layers } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
+import Footer from "./Footer";
 
 const FAQ = () => {
     const ref = useRef(null);
@@ -61,47 +62,50 @@ const FAQ = () => {
     ];
 
     return (
-        <div ref={ref} className="px-8 py-16 bg-gradient-to-b from-white to-gray-50" id="faq">
-            {/* FAQ Header */}
-            <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="flex justify-center mb-8"
-            >
-                <p className="font-bold text-3xl text-gray-800">FAQ</p>
-            </motion.div>
+        <div>
+            <div ref={ref} className="px-8 py-16 bg-gradient-to-b from-white to-gray-50" id="faq">
+                {/* FAQ Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex justify-center mb-8"
+                >
+                    <p className="font-bold text-3xl text-gray-800">FAQ</p>
+                </motion.div>
 
-            {/* Accordion Section */}
-            <motion.div
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                variants={containerVariants}
-                className="p-8"
-            >
-                <Accordion type="single" collapsible className="w-full">
-                    {faqItems.map((item, index) => (
-                        <motion.div
-                            key={item.value}
-                            variants={itemVariants}
-                            className="mb-4"
-                        >
-                            <AccordionItem value={item.value}>
-                                <AccordionTrigger className="text-xl font-semibold text-gray-800 flex items-center">
-                                    <span className="flex items-center space-x-2">
-                                        {item.icon}
-                                        <span>{item.question}</span>
-                                    </span>
-                                </AccordionTrigger>
-                                <AccordionContent className="text-lg text-gray-700">
-                                    {item.answer}
-                                </AccordionContent>
-                            </AccordionItem>
-                        </motion.div>
-                    ))}
-                </Accordion>
+                {/* Accordion Section */}
+                <motion.div
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    variants={containerVariants}
+                    className="p-8"
+                >
+                    <Accordion type="single" collapsible className="w-full">
+                        {faqItems.map((item, index) => (
+                            <motion.div
+                                key={item.value}
+                                variants={itemVariants}
+                                className="mb-4"
+                            >
+                                <AccordionItem value={item.value}>
+                                    <AccordionTrigger className="text-xl font-semibold text-gray-800 flex items-center">
+                                        <span className="flex items-center space-x-2">
+                                            {item.icon}
+                                            <span>{item.question}</span>
+                                        </span>
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-lg text-gray-700">
+                                        {item.answer}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </motion.div>
+                        ))}
+                    </Accordion>
 
-            </motion.div>
+                </motion.div>
+            </div>
+            <Footer/>
         </div>
     );
 };

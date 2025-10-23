@@ -10,18 +10,18 @@ import EarlyFit from "../../assests/early.png";
 
 const projects = [
     {
+        title: "AI-Powered Task Management System",
+        description: "Smart task manager with AI-driven features like smart assistant, sentiment analysis and many more... Features include visual analytics and a modern responsive UI.",
+        tags: ["AI Integration", "Smart Prioritization", "Sentiment Analysis", "Responsive", "Modern UI/UX", "Data Visualization"],
+        image: Task,
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7376130732848578560/",
+    },
+    {
         title: "Early Fit – Personalized Fitness & Wellness Assistant",
         description: "Fitness platform with OTP-auth forms, Razorpay payments, real time chat patient, consultant and admin panels",
         tags: ["HealthTech", "Full Stack", "AI Insights", "Metabolic Form", "Consultation", "Fitness", "SEO", "Responsive UI"],
         image: EarlyFit,
         link: "https://early.fit/",
-    },
-    {
-        title: "AI-Powered Task Management System",
-        description: "Smart task manager with AI-driven features like smart assistant, sentiment analysis and many more... Features include visual analytics and a modern responsive UI.",
-        tags: ["AI Integration", "Smart Prioritization", "Sentiment Analysis", "Responsive", "Modern UI/UX", "Data Visualization"],
-        image: Task,
-        link: "https://github.com/manavlade/Task-Management-App",
     },
     {
         title: "TalentBridge",
